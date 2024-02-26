@@ -72,7 +72,7 @@ Gestión de Punto de Venta y generación de Facturas con Laravel 10 y MySql.
 
 1. **Base de datos de semillas**
     ```bash
-    $ php artisan:migrate:fresh --seed
+    $ php artisan migrate:fresh --seed
 
     #Nota: Si muestra un error, intente volver a ejecutar este comando.
     ```
