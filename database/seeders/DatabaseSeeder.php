@@ -36,10 +36,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@gmail.com',
         ]);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
 
         Permission::create(['name' => 'pos.menu', 'group_name' => 'pos']);
         Permission::create(['name' => 'employee.menu', 'group_name' => 'employee']);
@@ -54,6 +51,10 @@ class DatabaseSeeder extends Seeder
         Permission::create(['name' => 'roles.menu', 'group_name' => 'roles']);
         Permission::create(['name' => 'user.menu', 'group_name' => 'user']);
         Permission::create(['name' => 'database.menu', 'group_name' => 'database']);
+        
+        Permission::create(['name' => 'salesEmployee.menu', 'group_name' => 'salesEmployee']);
+        Permission::create(['name' => 'creditClient.menu', 'group_name' => 'creditClient']);
+        Permission::create(['name' => 'soldItems.menu', 'group_name' => 'soldItems']);
 
         Role::create(['name' => 'SuperAdmin'])->givePermissionTo(Permission::all());
         Role::create(['name' => 'Admin'])->givePermissionTo(['customer.menu', 'user.menu', 'supplier.menu']);
@@ -62,5 +63,9 @@ class DatabaseSeeder extends Seeder
 
         $admin->assignRole('SuperAdmin');
         $user->assignRole('Account');
+        
+      
+
+        
     }
 }
